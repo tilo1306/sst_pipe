@@ -29,4 +29,4 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy SST
-        run: npx sst deploy --stage ${{ github.ref == 'refs/heads/develop' &&'develop' || 'prod' }}
+        run: npx sst remove --stage ${{ github.ref == 'refs/heads/develop' &&'develop' || 'prod' }}
